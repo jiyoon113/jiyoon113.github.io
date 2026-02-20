@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiyoon Jang | Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #0984e3;
+            --text-color: #636e72;
+            --bg-color: #f5f6fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--primary-color);
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            color: var(--text-color);
+            font-size: 0.9em;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dfe6e9;
+            padding: 2px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        .edu-item {
+            margin-bottom: 15px;
+        }
+
+        .date {
+            float: right;
+            color: var(--text-color);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .date { float: none; display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Giyoon Jang</h1>
+        <p style="font-size: 1.2em; color: var(--text-color);">Computer Science Graduate Student | Generative AI Enthusiast</p>
+        <div class="contact-info">
+            <span><i class="fas fa-envelope"></i> <a href="mailto:jyjang1130@hanyang.ac.kr">jyjang1130@hanyang.ac.kr</a></span>
+            <span><i class="fab fa-github"></i> <a href="https://github.com/jiyoon113" target="_blank">github.com/jiyoon113</a></span>
+            <span><i class="fas fa-map-marker-alt"></i> Seoul, Korea</span>
+        </div>
+    </header>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate software developer specializing in Computer Science, currently pursuing my Master's degree at Soongsil University. 
+            With a solid academic foundation from Hanyang University and UC San Diego, I focus on bridging the gap between cutting-edge AI technologies and practical user experiences.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <div class="edu-item">
+            <strong>Soongsil University</strong> <span class="date">Mar 2026 - Present</span>
+            <div>MS in Computer Science</div>
+        </div>
+        <div class="edu-item">
+            <strong>Hanyang University (Ansan)</strong> <span class="date">Mar 2019 - Aug 2025</span>
+            <div>BS in Computer Science (GPA: 3.82/4.5)</div>
+        </div>
+        <div class="edu-item">
+            <strong>University of California, San Diego (UCSD)</strong> <span class="date">Sep 2023 - Jun 2024</span>
+            <div>Exchange Student Program | Discrete Mathematics, Computational Theory</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Key Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Gen AI Studio</h3>
+                <p>An emotional image generation platform using Stable Diffusion. Optimized quality by fine-tuning SD-VAE noise.</p>
+                <div class="tag">Python</div><div class="tag">React</div><div class="tag">Firebase</div>
+            </div>
+            <div class="card">
+                <h3>Start-up Idea-Thon</h3>
+                <p>Designed a community-based platform for small group interactions and knowledge sharing during COVID-19.</p>
+                <div class="tag">Product Design</div><div class="tag">Development</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Work Experience</h2>
+        <div class="edu-item">
+            <strong>Lotte Innovate</strong> | Intern <span class="date">Dec 2024 - Feb 2025</span>
+            <ul>
+                <li>Spearheaded AI image generation research and back-end DB structuring using Firebase.</li>
+            </ul>
+        </div>
+        <div class="edu-item">
+            <strong>Einsis INC</strong> | IT Service Manager <span class="date">Jun 2022 - Dec 2022</span>
+            <ul>
+                <li>Streamlined cross-team processes and implemented effective workflow solutions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills & Certifications</h2>
+        <div class="grid" style="grid-template-columns: 1fr;">
+            <div class="card" style="background: white; border: 1px solid #dfe6e9;">
+                <strong>Technical:</strong> Python, Java, JavaScript, NoSQL, React, Firebase<br>
+                <strong>Languages:</strong> English (TOEIC 880, OPIC IH), Korean (Native)<br>
+                <strong>Certification:</strong> Computer Specialist in Spreadsheet & Database (Level 1)
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
