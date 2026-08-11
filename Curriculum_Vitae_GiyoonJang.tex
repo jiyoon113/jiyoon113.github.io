@@ -1,0 +1,191 @@
+% =====================================================================
+%  Curriculum Vitae - Giyoon Jang (장지윤)
+%  Compile with:  xelatex Curriculum_Vitae_GiyoonJang.tex
+%  (XeLaTeX is required because the document contains Korean text.)
+% =====================================================================
+
+\documentclass[10pt,a4paper]{article}
+
+% --- Korean language support -----------------------------------------
+% Uses the kotex package when it is available (e.g. Overleaf, TeX Live full).
+% Otherwise it falls back to a CJK-capable system font via fontspec.
+\usepackage{iftex}
+\ifXeTeX
+    \usepackage{fontspec}
+    \IfFileExists{kotex.sty}
+        {\usepackage{kotex}}
+        {\setmainfont{Noto Serif CJK KR}}
+\else
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{kotex}
+\fi
+% ---------------------------------------------------------------------
+
+\usepackage{geometry}
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Title formatting based on the original CV.
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+% Reusable CV commands.
+\newcommand{\seclabel}[1]{\section*{\uppercase{#1}}}
+\newcommand{\cvitem}[2]{\textbf{#1} \hfill \small{#2}\\}
+\newcommand{\placeholder}[1]{\textnormal{[#1]}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=cyan,
+    urlcolor=cyan,
+    citecolor=cyan
+}
+
+\setlist[itemize]{leftmargin=0pt}
+\setlist[enumerate]{leftmargin=0pt}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{\textwidth}
+    \begin{center}
+        \textbf{\Huge{Giyoon Jang}} \\ \vspace{1.0em}
+        M.S. Student, School of Software \\
+        Soongsil University \\
+        \href{https://sites.google.com/view/ssu-nlp/home}{Natural Language Processing Lab} \\
+        \textbf{Email: }\href{mailto:jyjang1130@soongsil.ac.kr}{jyjang1130@soongsil.ac.kr} \\
+        \textbf{Home: }\href{https://jiyoon113.github.io}{https://jiyoon113.github.io} \\
+        \textbf{GitHub: }\href{https://github.com/jiyoon113}{https://github.com/jiyoon113} \\
+        \textbf{LinkedIn: }\href{https://www.linkedin.com/in/giyoon-jang-784876165/}{https://www.linkedin.com/in/giyoon-jang-784876165/} \\
+        \textbf{Lab: }\href{https://sites.google.com/view/ssu-nlp/home}{https://sites.google.com/view/ssu-nlp/home}
+    \end{center}
+\end{minipage}
+
+\vspace{1em}
+
+\seclabel{Lifelong Research Objective}
+\small{My long-term objective is to make generative AI systems that are not only capable but also
+trustworthy and genuinely useful to people, by studying how large language models should be
+evaluated, governed, and safely deployed in real-world settings.}
+
+\seclabel{Research Interests}
+\small{Natural Language Processing, Large Language Models, Generative AI, LLM Evaluation and
+Benchmarking, Trustworthy and Safe AI, Human-Centered AI Applications}
+
+\seclabel{Education}
+\begin{itemize}
+    \item \cvitem{Soongsil University}{Mar 2026 -- Present}
+    \small{M.S. in School of Software (advisor: \href{https://parkchanjun.github.io/}{Chanjun Park}) \\
+    \href{https://sites.google.com/view/ssu-nlp/home}{Natural Language Processing Lab}} \vspace{0.6em}
+
+    \item \cvitem{Hanyang University (ERICA, Ansan)}{Mar 2019 -- Aug 2025}
+    \small{B.S. in Computer Science \\
+    GPA: 3.82 / 4.5} \vspace{0.6em}
+
+    \item \cvitem{University of California, San Diego (UCSD)}{Sep 2023 -- Jun 2024}
+    \small{Exchange Student Program \\
+    Coursework: Discrete Mathematics, Computational Theory}
+\end{itemize}
+
+\seclabel{Work Experience}
+\begin{itemize}
+    \item \cvitem{Soongsil University}{Mar 2025 -- Present}
+    \small{Graduate Researcher \\
+    \href{https://sites.google.com/view/ssu-nlp/home}{Natural Language Processing Lab}} \vspace{0.6em}
+
+    \item \cvitem{Lotte Innovate}{Dec 2024 -- Feb 2025}
+    \small{Intern \\
+    Conducted AI image generation research and designed the back-end database structure using Firebase.} \vspace{0.6em}
+
+    \item \cvitem{Einsis INC}{Jun 2022 -- Dec 2022}
+    \small{IT Service Manager \\
+    Streamlined cross-team processes and implemented workflow solutions for service operations.}
+\end{itemize}
+
+% --- PUBLICATIONS -----------------------------------------------------
+% No publications yet. To add them later, uncomment this block by removing
+% the leading "% " from each line.
+% \seclabel{Publications}
+% \textit{Equal contribution}: *, \textit{Corresponding author}: $\dagger$
+% \vspace{0.4em} \\
+% \noindent\textit{Google Scholar}: \href{https://scholar.google.com}{\placeholder{YOUR GOOGLE SCHOLAR URL}}
+%
+% \noindent\textit{Semantic Scholar}: \href{https://www.semanticscholar.org}{\placeholder{YOUR SEMANTIC SCHOLAR URL}}
+%
+% \noindent\textit{arXiv}: \href{https://arxiv.org}{\placeholder{YOUR ARXIV AUTHOR URL}}
+%
+% \paragraph{Conferences}
+% \begin{enumerate}
+%     \item \small{\textbf{\placeholder{PAPER TITLE}} \\
+%     \placeholder{AUTHOR 1}, \underline{Giyoon Jang}\textsuperscript{$\dagger$}, \placeholder{AUTHOR 3} \\
+%     \textit{\placeholder{CONFERENCE NAME, YEAR}}}
+% \end{enumerate}
+%
+% \paragraph{Workshops}
+% \begin{enumerate}
+%     \item \small{\textbf{\placeholder{WORKSHOP PAPER TITLE}} \\
+%     \placeholder{AUTHOR LIST WITH YOUR NAME UNDERLINED} \\
+%     \textit{\placeholder{WORKSHOP NAME, YEAR}}}
+% \end{enumerate}
+%
+% \paragraph{Journals}
+% \begin{enumerate}
+%     \item \small{\textbf{\placeholder{JOURNAL ARTICLE TITLE}} \\
+%     \placeholder{AUTHOR LIST WITH YOUR NAME UNDERLINED} \\
+%     \textit{\placeholder{JOURNAL NAME, VOLUME, ISSUE, PAGES, YEAR}}}
+% \end{enumerate}
+
+\newpage
+
+\seclabel{Research Projects}
+\textbf{Soongsil University}
+\begin{itemize}[left=0pt]
+    \item \small 2026년 인공지능 말평 운영 및 연계 행사 개최 (2026, 참여연구자 (용역과제), National Institute of the Korean Language)
+    \item \small 2026년 인공지능의 한국어 능력 표준 평가 과제 구축 및 활용 (2026, 참여연구자 (용역과제), National Institute of the Korean Language)
+    \item \small 우수연구 신진연구 (유형B) (2026-2029, 참여연구자 (3책5공), NRF)
+    \item \small Foundation Model 운용과정에서 민감정보 추론 방지 및 리스크 평가 기술 개발 (2026-2028, 참여연구자 (3책5공), Korea Internet \& Security Agency (한국인터넷진흥원))
+    \item \small 토론과 소통으로 지식을 연결하는 AI 에이전트 기술 개발 (2026-2028, 참여연구자 (3책5공), Korea Creative Content Agency(한국콘텐츠진흥원))
+    \item \small AI 보안 특화 'AI 에이전트' 개발 선행 연구 (2026,  참여연구자 (용역과제), 한국정보보호학회 산하 AI보안연구회)
+    \item \small 국가·공공기관 가이드라인 준수를 위한 AI 시스템 보안 위협 자동화 기술점검 도구 개발 (2026, 참여연구자, KIST)
+    \item \small AI 연구용 컴퓨팅 지원 프로젝트 (파라미터 수준의 정보 제어 원천기술 연구 및 파라미터 스튜디오 플랫폼 개발) (2026,  참여연구자, KETI)
+    \item \small 지역지능화혁신인재양성 (ITRC) (2026-2029,  참여연구자, IITP)
+\end{itemize}
+
+\seclabel{Patents}
+\textbf{Domestic Patents Applications}
+\begin{itemize}
+    \item \small{\textbf{인공지능 모델의 성능을 평가하는 벤치마크를 검증하는 전자 장치 및 이의 동작 방법} \\
+    박찬준, \textbf{장지윤} \\
+    \textit{Korean Patent Application, filed on August 7, 2026 (Application No. 10-2026-0147704).}}
+\end{itemize}
+
+\seclabel{Awards/Fellowships}
+% No awards yet. Uncomment the block below to add them.
+% \textbf{Awards}
+% \begin{itemize}
+%     \item \small{\placeholder{AWARD NAME}, \placeholder{AWARDING ORGANIZATION} (\placeholder{YEAR})}
+% \end{itemize}
+% \vspace{0.8em}
+\textbf{Fellowships}
+\begin{itemize}
+    \item \small{Research Assistantship (RA) Scholarship, Soongsil University (2026)}
+    \item \small{Merit-Based Scholarship (Departmental Recommendation), Soongsil University (2026)}
+\end{itemize}
+
+\seclabel{Teaching}
+\textbf{Soongsil University}
+\begin{itemize}
+    \item \small{\textbf{Database}, Teaching Assistant (Spring 2026)}
+\end{itemize}
+
+\seclabel{Talks}
+\textbf{Domestic Talks}
+\begin{itemize}
+    \item \small{\textbf{미소테크 (Misotech)}, API 및 Agent 실습 강연 (Hands-on Lecture on APIs and Agents), Jul 2026}
+\end{itemize}
+
+\end{document}
